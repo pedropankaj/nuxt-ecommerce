@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "node init && nuxt build",
+    "dev": "node init && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "start":"node .output/server/index.mjs"
+    "start": "node init && node .output/server/index.mjs"
   },
   "dependencies": {
     "@nuxt/icon": "^1.12.0",
@@ -24,8 +24,10 @@
     "@vueuse/core": "^13.1.0",
     "bcrypt": "^5.1.1",
     "chart.js": "^4.4.9",
+    "dotenv": "^8.2.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.2",
+    "node-fetch": "^3.3.2",
     "nuxt": "^3.16.2",
     "pinia": "^3.0.2",
     "postcss-color-gray": "^5.0.0",
